@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println("2> search(\"mango\") = " + s.search("mango"));
         System.out.println("3> mango 뒤에 blueberry 삽입 - getNode()와 insertAfter() 이용");
-        Node mangoNode = s.getNode(s.search("mango"));
+        Node<String> mangoNode = s.getNode(s.search("mango"));
         s.insertAfter("blueberry", mangoNode);
         System.out.println(s);
         System.out.println();
@@ -35,7 +35,7 @@ public class Main {
 
         System.out.println("6> search(\"apple\") = " + s.search("apple"));
         System.out.println("7> apple 뒤의 노드를 삭제 - getNode()와 deleteAfter() 이용");
-        Node appleNode = s.getNode(s.search("apple"));
+        Node<String> appleNode = s.getNode(s.search("apple"));
         s.deleteAfter(appleNode);
         System.out.println(s);
         System.out.println();

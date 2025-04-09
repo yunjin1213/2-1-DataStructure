@@ -1,28 +1,34 @@
+//자료구조(6065) 과제1 (60241180 김윤진)
 package week2;
 
-// 자료구조(6065) 과제 1 60241180 김윤진
 public class Hanoi {
 
-    public static void hanoi(int numDisks, char source, char auxiliary, char destination) {
-        if (numDisks == 1) {
-            System.out.println("Move Disk 1 from " + source + " to " + destination);
+    public static void move(int n, char from, char left, char to) {
+        if (n == 1) {
+            System.out.println("Move Disk 1 " + from + " to " + to);
             return;
         }
-        hanoi(numDisks - 1, source, destination, auxiliary);
-        System.out.println("Move Disk " + numDisks + " from " + source + " to " + destination);
-        hanoi(numDisks - 1, auxiliary, source, destination);
+        move(n - 1, from, to, left);
+
+        System.out.println("Move Disk " + n + " " + from + " to " + to);
+
+        move(n - 1, left, from, to);
     }
 
     public static void main(String[] args) {
-        System.out.println("자료구조(6065) 과제 1 60241180 김윤진");
+        int n = 3;
+        int j = 4;
 
-        System.out.println("\nn = 3일 경우:");
+        System.out.println("원반이 3개인 경우");
         System.out.println("(원반 이름 크기가 작은 -> 큰 순서 : 1 - 2 - 3)");
-        hanoi(3, 'A', 'B', 'C');
+        move(n, 'A', 'B', 'C');
 
-        System.out.println("\nn = 4일 경우:");
+        System.out.println();
+
+        System.out.println("원반이 4개인 경우");
         System.out.println("(원반 이름 크기가 작은 -> 큰 순서 : 1 - 2 - 3 - 4)");
-        hanoi(4, 'A', 'B', 'C');
+        move(j, 'A', 'B', 'C');
+
     }
 
 }

@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 public class SList<E extends Comparable<E>> {
 
-    protected Node head; // 연결 리스트의 첫 노드 가리킴
+    protected Node head;
     private int size;
 
     public SList() { // 연결 리스트 생성자
@@ -13,10 +13,11 @@ public class SList<E extends Comparable<E>> {
         size = 0;
     }
 
+
     public int search(E target) {
         Node p = head;
         for (int k = 0; k < size; k++) {
-            if (target.equals(p.getItem())) return k;
+            if (target == p.getItem()) return k;
             p = p.getNext();
         }
         return -1;
@@ -34,7 +35,6 @@ public class SList<E extends Comparable<E>> {
 
     public void deleteFront() {
         if (isEmpty()) throw new NoSuchElementException();
-
         head = head.getNext();
         size--;
     }
@@ -103,7 +103,6 @@ public class SList<E extends Comparable<E>> {
                 deleteAfter(p);
             }
         }
-
     }
 
     @Override
@@ -119,12 +118,10 @@ public class SList<E extends Comparable<E>> {
             }
             p = p.getNext();
         }
-
         return sb.toString();
     }
 
     private boolean isEmpty() {
         return size == 0;
     }
-
 }
