@@ -21,7 +21,7 @@ public class DigitCheck {
         if (n / 10 == 0) {
             return 1;
         }
-        
+
         return 1 + digitCheckCount(n / 10);
     }
 

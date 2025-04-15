@@ -22,6 +22,7 @@ public class Hanoi {
         System.out.println("원반이 3개인 경우");
         System.out.println("(원반 이름 크기가 작은 -> 큰 순서 : 1 - 2 - 3)");
         move(n, 'A', 'B', 'C');
+        // move(3, A, B, C)
 
         System.out.println();
 
@@ -30,5 +31,6 @@ public class Hanoi {
         move(j, 'A', 'B', 'C');
 
     }
-
 }
+
+// move(3,A,B,C) 가 들어감
