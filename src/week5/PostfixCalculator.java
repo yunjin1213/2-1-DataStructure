@@ -43,7 +43,6 @@ public class PostfixCalculator {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("자료구조(6065) 과제 #4 60241180 김윤진");
-        System.out.print("후위 표기 수식을 입력하세요 (예: 23*54*+9-): ");
         String input = sc.nextLine();
         int result = evaluatePostfix(input);
 
