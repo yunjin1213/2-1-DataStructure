@@ -25,35 +25,35 @@ public class Main {
         System.out.println();
 
         System.out.println("최소힙 구축 전 힙의 (키,값) & 높이");
-        PrintHeap(heap);
+        printHeap(heap);
 
         heap.creatHeap();
 
         System.out.println("최소힙 구축 후 힙의 (키, 값) & 높이");
-        PrintHeap(heap);
+        printHeap(heap);
 
         heap.insert(44, "Begonia");
         heap.insert(73, "Freesia");
 
         System.out.println("(44, \"Begonia\"), (73, \"Freesia\") 삽입 후 최소힙의 (키, 값) & 높이");
-        PrintHeap(heap);
+        printHeap(heap);
 
         Entry<Integer, String> minHeap = heap.deleteMin();
         System.out.println("최소값(Key) 삭제 후 삭제된 키의 값(Value): (" + minHeap.getKey() + ", " + minHeap.getValue() + ")");
         System.out.println("최소값 삭제 후 최소힙의 (키, 값) & 높이");
-        PrintHeap(heap);
+        printHeap(heap);
 
         heap.decreaseKey(99, 29);
         System.out.println("99를 29로 감소 후 최소힙의 (키,값) & 높이");
-        PrintHeap(heap);
+        printHeap(heap);
 
         heap.delete(33);
         System.out.println("33을 삭제 후 최소힙의 (키, 값) & 높이");
-        PrintHeap(heap);
+        printHeap(heap);
 
     }
 
-    public static void PrintHeap(BHeap<Integer, String> heap) {
+    public static void printHeap(BHeap<Integer, String> heap) {
         for (int i = 1; i <= heap.size(); i++) {
             Entry<Integer, String> e = heap.getEntry(i);
             System.out.print("(" + e.getKey() + ", " + e.getValue() + ") ");
@@ -64,6 +64,6 @@ public class Main {
     }
 
     public static int getHeight(int n) {
-        return (int) (Math.log(n) / Math.log(2)) + 1;
+        return (int) (Math.log(n + 1) / Math.log(2));
     }
 }
