@@ -1,5 +1,4 @@
 // 자료구조(6065) 과제 #8 (60241180 김윤진)
-
 package week9;
 
 public class LinearProbing<K, V> {

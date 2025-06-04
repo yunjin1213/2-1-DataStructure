@@ -1,5 +1,4 @@
 // 자료구조(6065) 과제 #8 (60241180 김윤진)
-
 package week9;
 
 public class Chaining<K, V> {
@@ -27,7 +26,7 @@ public class Chaining<K, V> {
     }
 
     private int hash(K key) {
-        return (key.hashCode() & 0x7fffffff) % M; //나눗셈함수 (음수되는거 방지함)
+        return (key.hashCode() & 0x7fffffff) % M;
     }
 
     public V get(K key) {

@@ -1,5 +1,4 @@
 // 자료구조(6065) 과제 #8 (60241180 김윤진)
-
 package week9;
 
 public class DoubleHashing<K, V> {
@@ -20,7 +19,7 @@ public class DoubleHashing<K, V> {
         int initialpos = hash(key);
         int i = initialpos;
         int j = 1;
-        int d = (7 - (int) key % 7); // 두 번째 해시 함수
+        int d = (7 - (int) key % 7);
 
         do {
             if (a[i] == null) {
@@ -41,7 +40,7 @@ public class DoubleHashing<K, V> {
         int initialpos = hash(key);
         int i = initialpos;
         int j = 1;
-        int d = (7 - (int) key % 7); // 두 번째 해시 함수
+        int d = (7 - (int) key % 7);
 
         while (a[i] != null) {
             if (a[i].equals(key)) {
