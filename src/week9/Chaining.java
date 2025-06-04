@@ -53,13 +53,16 @@ public class Chaining<K, V> {
 
     public void printTable() {
         for (int i = 0; i < M; i++) {
-            System.out.print(i + ": ");
             Node x = a[i];
+            if (x == null) continue;
+
+            System.out.print(i + ": ");
             while (x != null) {
-                System.out.print(x.key + " -> ");
+                System.out.print(x.key);
                 x = x.next;
+                if (x != null) System.out.print(" -> ");
             }
-            System.out.println("null");
+            System.out.println();
         }
     }
 }
