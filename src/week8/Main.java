@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Entry a[] = new Entry[20];
 
+         
         a[1] = new Entry(92, "Rose");
         a[2] = new Entry(87, "Tulip");
         a[3] = new Entry(15, "Lily");
