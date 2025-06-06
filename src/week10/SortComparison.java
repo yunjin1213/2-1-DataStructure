@@ -14,52 +14,52 @@ public class SortComparison {
         System.out.println();
 
         Integer[] arrayTOSort;
-        long start;
-        long end;
+        long startTime;
+        long endTime;
 
         // Selection sort
         arrayTOSort = keys.clone();
-        start = System.nanoTime();
+        startTime = System.nanoTime();
         Selection.sort(arrayTOSort);
-        end = System.nanoTime();
-        System.out.printf("[Selection sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (end - start) / 1_000_000.0, Selection.comparisonCount, Selection.swapCount);
+        endTime = System.nanoTime();
+        System.out.printf("[Selection sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (endTime - startTime) / 1_000_000.0, Selection.comparisonCount, Selection.swapCount);
 
         // Insertion sort
         arrayTOSort = keys.clone();
-        start = System.nanoTime();
+        startTime = System.nanoTime();
         Insertion.sort(arrayTOSort);
-        end = System.nanoTime();
-        System.out.printf("[Insertion sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (end - start) / 1_000_000.0, Insertion.comparisonCount, Insertion.swapCount);
+        endTime = System.nanoTime();
+        System.out.printf("[Insertion sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (endTime - startTime) / 1_000_000.0, Insertion.comparisonCount, Insertion.swapCount);
 
         // Shell sort
         arrayTOSort = keys.clone();
-        start = System.nanoTime();
+        startTime = System.nanoTime();
         Shell.sort(arrayTOSort);
-        end = System.nanoTime();
-        System.out.printf("[Shell sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (end - start) / 1_000_000.0, Shell.comparisonCount, Shell.swapCount);
+        endTime = System.nanoTime();
+        System.out.printf("[Shell sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (endTime - startTime) / 1_000_000.0, Shell.comparisonCount, Shell.swapCount);
 
         // Heap sort
         arrayTOSort = new Integer[keys.length + 1];
         arrayTOSort[0] = 0;
         System.arraycopy(keys, 0, arrayTOSort, 1, keys.length);
-        start = System.nanoTime();
+        startTime = System.nanoTime();
         Heap.sort(arrayTOSort);
-        end = System.nanoTime();
-        System.out.printf("[Heap sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (end - start) / 1_000_000.0, Heap.comparisonCount, Heap.swapCount);
+        endTime = System.nanoTime();
+        System.out.printf("[Heap sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (endTime - startTime) / 1_000_000.0, Heap.comparisonCount, Heap.swapCount);
 
         // Merge sort
         arrayTOSort = keys.clone();
-        start = System.nanoTime();
+        startTime = System.nanoTime();
         Merge.sort(arrayTOSort);
-        end = System.nanoTime();
-        System.out.printf("[Merge sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (end - start) / 1_000_000.0, Merge.comparisonCount, Merge.swapCount);
+        endTime = System.nanoTime();
+        System.out.printf("[Merge sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (endTime - startTime) / 1_000_000.0, Merge.comparisonCount, Merge.swapCount);
 
         // Quick sort
         arrayTOSort = keys.clone();
-        start = System.nanoTime();
+        startTime = System.nanoTime();
         Quick.sort(arrayTOSort);
-        end = System.nanoTime();
-        System.out.printf("[Quick sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (end - start) / 1_000_000.0, Quick.comparisonCount, Quick.swapCount);
+        endTime = System.nanoTime();
+        System.out.printf("[Quick sort] 소요된 시간: %.3fms, 원소간 비교 횟수: %d, 원소 교환 횟수: %d\n", (endTime - startTime) / 1_000_000.0, Quick.comparisonCount, Quick.swapCount);
 
         /* 결과 분석
          * 1. 정렬 시간 (가장 긴 -> 짧은 순):
